@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --orange: #F2C14E;
+    --winning-blocks: #222;
+    --header-block: #111;
+}
+
+body{
+    color: var(--orange);
+    background-color: var(--winning-blocks);
+}
+
+.wrapper{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-cont input{
+    width: 800px;
+    height: 60px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+    padding: 5px 25px;
+}
+
+li{
+    padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+    list-style: none;
+}
+
+li:hover{
+    background: #181717;
+    padding-left: 15px;
+    border-radius: 5px;
+}
+
+li .poster{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+li .poster img{
+    width: 100px;
+    height: 100px;
+}
+
+li .details{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding-left: 10px;
+}
+
+li .details h3{
+    width: auto;
+    font-size: auto;
+    padding-bottom: 15px;
+}
+
+li .details p{
+    width: 100%;
+    font-size: 20px;
+}
+
+.search-cont{
+    background: #4e4e4e;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px;
+}
+
+.autocomplete-box {
+    max-width: 800px;
+    max-height: 440px;
+    overflow-y: auto;
+}
+
+
+.autocomplete-box.hide {
+    display: none;
+}
+
+/* custom scroll bar */
+.autocomplete-box::-webkit-scrollbar {
+    width: 8px;
+    height: 5px;
+}
+
+.autocomplete-box::-webkit-scrollbar-thumb {
+    background: var(--orange);
+    border-radius: 50px;
+}
+
+.autocomplete-box::-webkit-scrollbar-track {
+    margin: 14px;
+    background: transparent;
+}
+
+
+/* Media Queries */
+@media only screen and (max-width: 800px),(max-height: 770px) {
+    .wrapper{
+        margin-top: 100px;
+    }
+
+    .search-cont input {
+        width: 650px;
+    }
+    
+    .autocomplete-box {
+        max-width: 650px;
+        max-height: 440px;
+    }
+}
+
+@media only screen and (max-width: 660px),(max-height: 710px) {
+    .wrapper{
+        margin-top: 50px;
+    }
+
+    .search-cont input {
+        width: 450px;
+    }
+
+    .autocomplete-box {
+        max-width: 450px;
+        max-height: 300px;
+    }
+
+    li .details h3{
+        font-size: 15px;
+    }
+
+    li .details p{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .wrapper{
+        margin-top: 20px;
+    }
+
+    .search-cont input {
+        width: 100%;
+    }
+
+    li .details h3{
+        font-size: 12px;
+    }
+
+    li .details p{
+        font-size: 8px;
+    }
+}
+
+@media only screen and (max-width: 240px) {
+    .wrapper{
+        margin-top: 10px;
+    }
+    li .details h3{
+        font-size: 10px;
+    }
+
+    li .details p{
+        font-size: 6px;
+    }
+}
+
+@media only screen and (max-height: 530px) {
+    .autocomplete-box {
+        max-height: 220px;
+    }
+}

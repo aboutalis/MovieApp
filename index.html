@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+<body>
+    <header>
+        <div class="logo-cont">
+            <a href="index.html">
+                <img src="images/logo.png" alt="logo">
+            </a>
+        </div>
+        <div class="title-cont">
+            <a href="index.html">
+                <h1 class="title">Movie App</h1>
+            </a>
+        </div>
+        <div class="favorite-cont">
+            <img src="images/heart.png" alt="favorite-icon">
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="search-cont">
+                <input type="text" placeholder="Enter movie title..." onkeyup="findMovies()" spellcheck="false">
+                
+                <div class="autocomplete-box " id="autocomplete-box">
+                    <!--
+                    <li>
+                        <div class="poster">
+                            <img src="Screenshot_2.png" alt="image-name">
+                        </div>
+                        <div class="details">
+                            <h3>AnastasiosAnastasiosAnastasiosPeriklisBoutalis<h3>
+                            <p>1998</p>
+                            
+                        </div>
+                        
+                    </li>
+                    -->
+                </div>
+            </div>
+        </div>
+
+        
+
+    </div>
+    
+    
+    <script src="script.js"></script>
+    <!-- <script src="detailPage/detail.js"></script> -->
+</body>
+</html>
