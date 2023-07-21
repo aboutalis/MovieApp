@@ -4,11 +4,13 @@ function getFavoritesFromLocalStorage() {
     return favorites;
 }
 
+
+
 // Function to display favorite movies on the favorite.html page
 function displayFavorites() {
     const favorites = getFavoritesFromLocalStorage();
     const container = document.querySelector('.grid-cont');
-    const favoriteContainer = document.querySelector(".favorite-cont");
+    // const favoriteContainer = document.querySelector(".favorite-cont");
 
     // Clear any existing content in the container
     container.innerHTML = '';

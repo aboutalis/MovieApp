@@ -44,13 +44,19 @@ body{
     gap: 25px;
 }
 
+
 .grid-item{
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1)
-    /* border: 1px solid; */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.grid-item:hover{
+    background: #111;
+    transform: scale(1.01);
 }
 
 .grid-item img{
