@@ -10,7 +10,6 @@ function getFavoritesFromLocalStorage() {
 function displayFavorites() {
     const favorites = getFavoritesFromLocalStorage();
     const container = document.querySelector('.grid-cont');
-    // const favoriteContainer = document.querySelector(".favorite-cont");
 
     // Clear any existing content in the container
     container.innerHTML = '';
@@ -36,13 +35,28 @@ function displayFavorites() {
                 title.classList.add('title');
                 title.textContent = data.Title;
 
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+                deleteButton.addEventListener('click', () => {
+                    removeFavorite(movieId); // Call the function to remove the movie from favorites
+                    displayFavorites(); // Update the display after removing the movie
+                });
+
                 gridItem.appendChild(poster);
                 gridItem.appendChild(title);
+                gridItem.appendChild(deleteButton);
                 container.appendChild(gridItem);
             })
             .catch(error => console.log("Error fetching movie details:", error));
     });
 }
+
+function removeFavorite(movieId) {
+    const favorites = getFavoritesFromLocalStorage();
+    const updatedFavorites = favorites.filter(id => id !== movieId);
+    localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
+}
+
 
 function displayFavoriteDetails(movieId) {
     localStorage.setItem('movieId', movieId);
