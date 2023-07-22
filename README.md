@@ -132,4 +132,4 @@ Special thanks to the developers of the OMDb API for providing the movie data us
 
 ### Favorite Scene:
 <p align="center">
-  <img src="https://github.com/aboutalis/MovieApp/assets/132292767/4fd693a0-1030-4f66-99ee-f40ec9a57a65" alt="startScene">
+  <img src="https://github.com/aboutalis/MovieApp/assets/132292767/4773e678-aa8d-4bc4-9713-a7b187f51404" alt="startScene">
